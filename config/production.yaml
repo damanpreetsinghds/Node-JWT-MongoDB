@@ -1,0 +1,3 @@
+MONGO_URI: 'mongodb://localhost:27017/kryptosmobile'
+
+secretKey: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
