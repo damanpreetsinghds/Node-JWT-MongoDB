@@ -27,7 +27,6 @@ module.exports.ensureAuthenticated = function (req, res, next) {
         // verifies secret and checks exp
         jwt.verify(token, config.secretKey, function (err, decoded) {
             if (err) {
-                logger.info('[authenticator] ', err);
                 return res.json({success: false, message: 'Failed to authenticate token.'});
             } else {
                 // if everything is good, save to request for use in other routes
@@ -51,7 +50,7 @@ module.exports.ensureAuthenticated = function (req, res, next) {
 module.exports.authenticationToken = function (user) {
 
     return jwt.sign(user, config.secretKey, {
-        expiresIn: 60 // expires in 1 min
+        expiresIn: 60 * 60 // expires in 1 hour
     });
 
 }

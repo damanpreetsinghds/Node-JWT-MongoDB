@@ -12,7 +12,7 @@ var logger = logManager.getLogger();
 
 
 exports.homepage = function (req, res) {
-    res.json({message: 'Welcome to the coolest API on earth!'});
+    res.json({message: 'Authentication successful !'});
 };
 
 
