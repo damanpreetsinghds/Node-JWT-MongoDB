@@ -16,12 +16,10 @@ module.exports.getConnection = function (callback) {
             if (err) {
                 throw err;
             }
-            console.log('Created database connection in db connection' + database);
             db = database;
             callback(db);
         });
     } else {
-        console.log('Else block of get connection');
         callback(db);
     }
 };
