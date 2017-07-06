@@ -20,4 +20,4 @@ module.exports.authenticationToken = function (user) {
 
     return jwt.sign(user, config.secretKey);
 
-}
+};

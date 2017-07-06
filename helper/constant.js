@@ -4,5 +4,5 @@
 
 
 module.exports.collections = {
-    USER_INFO_COLLECTION: 'user_info_auth_token'
+    USER_INFO_COLLECTION: 'user_info'
 };
