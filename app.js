@@ -32,7 +32,7 @@ app.use(expressJWT({
         if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
             return req.headers.authorization.split(' ')[1];
         } else if (req.body && req.body.access_token) {
-            return req.query.access_token;
+            return req.body.access_token;
         } else if (req.query && req.query.access_token) {
             return req.query.access_token;
         }
